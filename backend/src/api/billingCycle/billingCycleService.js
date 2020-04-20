@@ -18,6 +18,7 @@ BillingCycle.route('count', (req, res, next) => {
     })
 })
 
+
 BillingCycle.route('summary', (req, res, next) => {
     BillingCycle.aggregate([{ 
         $project: {credit: {$sum: "$credits.value"}, debt: {$sum: "$debts.value"}} 
@@ -33,5 +34,6 @@ BillingCycle.route('summary', (req, res, next) => {
         }
     })
 })
+
 
 module.exports = BillingCycle
