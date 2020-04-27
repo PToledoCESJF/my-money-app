@@ -19,7 +19,7 @@ module.exports = {
             bootstrap: 'modules/admin-lte/bootstrap/js/bootstrap.js'
         }
     },
-    plugins: [
+    plugins: [ 
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
@@ -32,7 +32,7 @@ module.exports = {
             test: /.js[x]?$/,
             loader: 'babel-loader',
             exclude: /node_modules/,
-                query: {
+            query: {
                 presets: ['es2015', 'react'],
                 plugins: ['transform-object-rest-spread']
             }

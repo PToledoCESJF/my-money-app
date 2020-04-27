@@ -5,11 +5,11 @@ import { getList, showUpdate, showDelete } from './billingCycleActions'
 
 class BillingCycleList extends Component {
 
-    componentWillMount(){
+    componentWillMount() {
         this.props.getList()
     }
 
-    renderRows(){
+    renderRows() {
         const list = this.props.list || []
         return list.map(bc => (
             <tr key={bc._id}>
@@ -20,8 +20,6 @@ class BillingCycleList extends Component {
                     <button className='btn btn-warning' onClick={() => this.props.showUpdate(bc)}>
                         <i className='fa fa-pencil'></i>
                     </button>
-                </td>
-                <td>
                     <button className='btn btn-danger' onClick={() => this.props.showDelete(bc)}>
                         <i className='fa fa-trash-o'></i>
                     </button>
@@ -30,8 +28,8 @@ class BillingCycleList extends Component {
         ))
     }
 
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <table className='table'>
                     <thead>
